@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAE Conductor</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+
+    <!-- Pantalla de inicio de sesión con numpad -->
+    <div id="loginScreen">
+        <h1>Iniciar Sesión - Conductor</h1>
+        <input type="password" id="loginUser" placeholder="Código">
+        <div id="numpad">
+            <button class="num">1</button>
+            <button class="num">2</button>
+            <button class="num">3</button>
+            <button class="num">4</button>
+            <button class="num">5</button>
+            <button class="num">6</button>
+            <button class="num">7</button>
+            <button class="num">8</button>
+            <button class="num">9</button>
+            <button id="clear">C</button>
+            <button class="num">0</button>
+            <button id="enter">OK</button>
+        </div>
+        <p id="loginError" style="color:#ff5252; font-weight:bold;"></p>
+    </div>
+
+    <!-- SAE del conductor -->
+    <div id="saeScreen" style="display:none;">
+        <h1>SAE Conductor</h1>
+        <button id="cerrarSesionBtn">Cerrar sesión</button>
+
+        <section>
+            <h2>Mi vehículo</h2>
+            <table id="tablaVehiculo">
+                <tr>
+                    <th>Horario Previsto</th>
+                    <th>Hora Real</th>
+                    <th>Estado</th>
+                    <th>Ubicación</th>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Registrar hora real</h2>
+            <input type="text" id="horaReal" placeholder="Hora real (ej: 12:30 o 15)">
+            <button id="registrarBtn">Registrar</button>
+        </section>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
